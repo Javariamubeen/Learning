@@ -8,7 +8,7 @@ app.get("/about",(req,res)=>{
        res.setHeader('Content-type','application/json')
         res.send(data)
         console.log(data)
-        console.log("I have read this file")
+        console.log("i have already read this file")
     })
 
 })
