@@ -1,0 +1,17 @@
+exports.getMethod=async (req,res)=>{
+    try{
+        const tour=await Tours.findById(req.params.id)
+        {
+            return res.status(404).json({
+                status:"found",
+                data:{
+                    tour
+                }
+            })
+    }
+    }catch(err) {
+        return res.status(404).json({
+            status: "fail",
+            message: "id not found"
+        })
+    }
